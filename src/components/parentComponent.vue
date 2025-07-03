@@ -1,21 +1,8 @@
 <template>
+  <p>Choose what part of this page you want to see:</p>
+  <router-link to="/about">About</router-link>
+  <router-link to="/">Home</router-link><br>
   <div>
-    <button @click="increment">Increment Value</button>
-    <h1>
-      HOME EDITS {{ counter }}
-      Array X {{ numbersArray }}
-    </h1>
+    <router-view></router-view>
   </div>
 </template>
-
-<script setup>
-import { ref, onMounted } from 'vue'
-
-const counter = ref(0)
-const numbersArray = ref([])
-function increment (){
-  counter.value++
-  numbersArray.value.push(counter.value)
-}
-
-</script>
